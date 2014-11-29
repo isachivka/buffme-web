@@ -54,4 +54,49 @@ popups = () ->
         close(target)
       false
 
+carusel = (block, in_window, width, left, right, wrap, time, points, napr) ->
+  th = 0
+  max = $(block).find("ul li").length - in_window
+  hover = false
+  auto = ->
+    to th + 1 unless hover
+    setTimeout (->
+      auto()
+    ), time
+  to = (num) ->
+    num = max if num < 0
+    num = 0 if num > max
+    if napr is "top"
+      $(block).find(wrap).animate
+        'margin-top': num * -1 * width
+      , 500, ->
+        th = num
+    if napr is "left"
+      $(block).find(wrap).animate
+        "margin-left": num * -1 * width
+      , 500, ->
+        th = num
+    if points
+      $(block).find("#{points} a").removeClass("active").addClass("passive")
+      $(block).find("#{points} a:eq(#{num})").removeClass("passive").addClass("active")
+  setTimeout (->
+    auto()
+  ), time
+  $(block).hover (->
+    hover = true
+  ), ->
+    hover = false
+  $(block).find(left).click ->
+    to th - 1
+    false
+  $(block).find(right).click ->
+    to th + 1
+    false
+  if points
+    $(block).find("#{points} a").click ->
+      n = $(this).prevAll().length
+      to n
+      false
 popups()
+carusel '.achievement', 8, 103, 'a.left', 'a.right', 'ul', 300000, '', 'left'
+$('input[type="checkbox"]').iCheck()

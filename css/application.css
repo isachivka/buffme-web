@@ -10,6 +10,7 @@ body {
 body {
   font-family: 'Roboto Slab';
   background: url(../img/bg.jpg) no-repeat center top;
+  overflow-x: hidden;
 }
 body button {
   font-family: 'Roboto Slab';
@@ -40,6 +41,12 @@ body input {
 body input:focus {
   outline: none;
 }
+body label {
+  cursor: pointer;
+}
+body a:hover {
+  text-decoration: none;
+}
 body .overlay {
   min-height: 100%;
   background: url(../img/overlay.png) repeat;
@@ -58,6 +65,44 @@ body .overlay section {
   position: relative;
   z-index: 30;
 }
+body .overlay section div.bd {
+  border: 1px solid #ededed;
+  border-width: 1px 0;
+  margin: 0 -80px 30px;
+  padding: 32px 0;
+}
+body .overlay section div.bd .locked {
+  padding: 0 80px;
+  position: relative;
+}
+body .overlay section div.bd .locked .elem {
+  opacity: 0.5;
+}
+body .overlay section div.bd .locked .ovl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/ovl.png);
+  z-index: 40;
+}
+body .overlay section div.bd .locked .ovl .box {
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 15px rgba(1, 3, 1, 0.25);
+  width: 454px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -36px 0 0 -227px;
+  line-height: 72px;
+  text-align: center;
+  color: #202020;
+  font-size: 28px;
+  font-weight: bold;
+}
 body .overlay section div.gray {
   margin: 60px -80px -60px;
   background: linear-gradient(to bottom, #eeedee 0%, #ffffff 35%, #ffffff 100%);
@@ -66,6 +111,41 @@ body .overlay section div.gray {
 }
 body .overlay section div.gray:last-child {
   margin-bottom: -80px;
+}
+body .overlay section div.gray.locked {
+  position: relative;
+}
+body .overlay section div.gray.locked * {
+  opacity: 0.5;
+}
+body .overlay section div.gray.locked .ovl {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/ovl.png);
+  z-index: 40;
+}
+body .overlay section div.gray.locked .ovl * {
+  opacity: 1;
+}
+body .overlay section div.gray.locked .ovl .box {
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 15px rgba(1, 3, 1, 0.25);
+  width: 454px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -36px 0 0 -227px;
+  line-height: 72px;
+  text-align: center;
+  color: #202020;
+  font-size: 28px;
+  font-weight: bold;
 }
 body .popup_wrapper {
   position: fixed;
@@ -115,6 +195,14 @@ i.icon.mag {
   vertical-align: -4px;
   margin: 0 11px 0 0;
 }
+i.icon.mag_active {
+  width: 27px;
+  height: 20px;
+  display: inline-block;
+  background: url('../img/mag_active.png');
+  vertical-align: -3px;
+  margin: 0 11px 0 0;
+}
 i.icon.profile {
   width: 25px;
   height: 21px;
@@ -131,14 +219,17 @@ i.icon.profile_active {
   vertical-align: -3px;
   margin: 0 11px 0 0;
 }
-i.icon.hamb {
+i.icon.hamb,
+i.icon.glass {
   width: 92px;
   height: 92px;
   display: inline-block;
   background: url('../img/hamb.png');
   display: block;
+  position: relative;
 }
-i.icon.hamb i.count {
+i.icon.hamb i.count,
+i.icon.glass i.count {
   border-radius: 20px;
   text-align: center;
   min-width: 14px;
@@ -152,6 +243,12 @@ i.icon.hamb i.count {
   font-size: 10px;
   line-height: 14px;
   padding: 0 3px;
+}
+i.icon.glass {
+  width: 92px;
+  height: 92px;
+  display: inline-block;
+  background: url('../img/glass.png');
 }
 i.icon.us {
   width: 14px;
@@ -193,6 +290,65 @@ i.icon.dstr {
   vertical-align: 1px;
   margin: 0 0 0 12px;
 }
+i.icon.ustr {
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  background: url('../img/ustr.png');
+  vertical-align: 1px;
+  margin: 0 0 0 12px;
+}
+i.icon.lock_achiv {
+  width: 85px;
+  height: 86px;
+  display: inline-block;
+  background: url('../img/lock_achiv.png');
+  margin: 3px 0 0 3.5px;
+}
+i.icon.carusel_left {
+  width: 28px;
+  height: 58px;
+  display: inline-block;
+  background: url('../img/carusel_left.png');
+}
+i.icon.carusel_right {
+  width: 28px;
+  height: 58px;
+  display: inline-block;
+  background: url('../img/carusel_right.png');
+}
+i.icon.rew_big {
+  width: 41px;
+  height: 31px;
+  display: inline-block;
+  background: url('../img/rew_big.png');
+  vertical-align: -8px;
+  margin: 0 17px 0 0;
+}
+i.icon.bb {
+  width: 19px;
+  height: 23px;
+  display: inline-block;
+  background: url('../img/bb.png');
+  vertical-align: -4px;
+  margin: 0 10px 0 0;
+}
+i.icon.speed {
+  width: 20px;
+  height: 18px;
+  display: inline-block;
+  background: url('../img/speed.png');
+  vertical-align: -2px;
+  margin: 0 10px 0 0;
+}
+i.icon.cc {
+  width: 16px;
+  height: 19px;
+  display: inline-block;
+  background: url('../img/cc.png');
+  vertical-align: -3px;
+  margin: 0 10px 0 0;
+}
 button.blue {
   border-radius: 10px;
   background: #81b9f1;
@@ -203,12 +359,24 @@ button.blue {
   text-shadow: 0 1px 0 #436fd0;
   padding: 0 30px;
 }
+button.blue.small {
+  height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 17px;
+}
 button.gray {
   border-radius: 10px;
   background: #e4e4e4;
-  height: 32px;
+  height: 49px;
   color: #202020;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 30px;
+}
+button.gray.small {
+  height: 32px;
+  font-size: 14px;
   font-weight: bold;
   padding: 0 17px;
 }
@@ -387,6 +555,23 @@ ul li {
   background: url(../img/li.png) 0 7px no-repeat;
   padding: 0 0 0 20px;
 }
+.icheckbox {
+  background: url(../img/icheck.png) no-repeat top left;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: -4px;
+  margin: 0 9px 0 0;
+}
+.icheckbox.checked {
+  background-position: bottom left;
+}
+.btns {
+  font-size: 0;
+}
+.btns button {
+  margin: 0 17px 0 0;
+}
 /* index */
 section.index .qr {
   float: right;
@@ -522,4 +707,238 @@ section.profile .missions .elem .data .stats span {
 }
 section.profile .missions .elem .data .stats em {
   color: #81b9f1;
+}
+section.profile .missions .elem .data .cb {
+  float: left;
+  overflow: hidden;
+}
+section.profile .missions .elem .data .cb .col {
+  width: 195px;
+  float: left;
+}
+section.profile .missions .elem .data .cb .col label {
+  font-size: 15px;
+  color: #414141;
+  font-weight: bold;
+  display: block;
+  margin: 0 0 15px;
+}
+section.profile .missions .elem .data .cb .col label.checked {
+  color: #a3a3a3;
+}
+section.profile .missions .elem .data .cb .col label:last-child {
+  margin: 0;
+}
+section.profile .achievement h2 a {
+  color: #dfdfdf;
+}
+section.profile .achievement h2 a em {
+  color: #2f4e81;
+}
+section.profile .achievement .carusel {
+  position: relative;
+}
+section.profile .achievement .carusel a.left,
+section.profile .achievement .carusel a.right {
+  position: absolute;
+  top: 14px;
+  left: -52px;
+}
+section.profile .achievement .carusel a.right {
+  left: auto;
+  right: -52px;
+}
+section.profile .achievement .carusel .ovh {
+  overflow: hidden;
+}
+section.profile .achievement .carusel ul {
+  margin: 0 0 23px;
+  overflow: hidden;
+  width: 10000px;
+}
+section.profile .achievement .carusel ul li {
+  background: none;
+  padding: 0;
+  float: left;
+  width: 92px;
+  height: 92px;
+  margin: 0 11px 0 0;
+  position: relative;
+}
+section.profile .achievement .col {
+  width: 402px;
+  float: left;
+  padding: 0 0 30px;
+}
+section.profile .achievement .col:first-child {
+  margin: 0 18px 0 0;
+}
+section.profile .achievement .elem {
+  overflow: hidden;
+  margin: 0 0 10px;
+}
+section.profile .achievement .elem:last-child {
+  margin: 0;
+}
+section.profile .achievement .elem .image {
+  width: 92px;
+  height: 92px;
+  float: left;
+}
+section.profile .achievement .elem .d {
+  margin: 0 0 0 92px;
+  padding: 10px 0 0 0;
+}
+section.profile .achievement .elem .d .title {
+  color: #202020;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 0 0 10px;
+}
+section.profile .achievement .elem .line {
+  background-color: #e6e6e6;
+  box-shadow: inset 0 1px 4px rgba(2, 8, 4, 0.25);
+  height: 23px;
+  border-radius: 4px;
+  margin: 10px 0 0 -10px;
+}
+section.profile .achievement .elem .line .active {
+  width: 40%;
+  height: 23px;
+  border-radius: 4px;
+  background: url(../img/line_active.png) repeat;
+}
+section.profile .achievement .elem .line.lock {
+  background: #eaeaea;
+  box-shadow: none;
+}
+section.profile .rewards button {
+  margin: 12px 0 0 0;
+}
+section.profile .rewards .elem {
+  font-weight: bold;
+  font-size: 18px;
+  border: 8px solid #a9cef3;
+  border-radius: 10px;
+  padding: 16px 25px 18px;
+  margin: 0 0 15px;
+}
+section.profile .rewards .elem span {
+  padding: 0 30px 0 0;
+}
+section.profile .rewards .elem em {
+  color: #2f4e81;
+}
+section.profile .rewards .elem big {
+  font-size: 22px;
+  font-weight: bold;
+}
+section.profile .news button {
+  margin: 12px 0 0 0;
+}
+section.profile .news .elem {
+  font-weight: bold;
+  font-size: 22px;
+  border: 8px solid #a9cef3;
+  border-radius: 10px;
+  padding: 21px 25px 23px;
+  margin: 0 0 15px;
+}
+section.profile .news .elem span.date {
+  display: inline-block;
+  width: 135px;
+  color: #414141;
+}
+section.profile .news .elem a.r {
+  color: #436fd1;
+  font-size: 18px;
+  float: right;
+  margin: 4px 0 0 0;
+}
+section.profile .bd .elem:last-child {
+  margin: 0;
+}
+/* shop */
+section.shop .goods .elem {
+  border: 1px solid #e3e3e3;
+  border-radius: 15px;
+  padding: 40px;
+  overflow: hidden;
+  margin: 0 0 25px;
+}
+section.shop .goods .elem img {
+  float: left;
+}
+section.shop .goods .elem .data {
+  margin: 0 0 0 140px;
+}
+section.shop .goods .elem .data h3 {
+  margin: 0 0 10px;
+  padding: 2px 0 10px;
+  border-bottom: 1px solid #e3e3e3;
+}
+section.shop .goods .elem .data .stats {
+  color: #414141;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 14px;
+}
+section.shop .goods .elem .data .stats span {
+  padding: 0 17px 0 0;
+}
+section.shop .goods .elem .data .stats em {
+  color: #81b9f1;
+}
+section.shop .goods .elem .data .cb {
+  float: left;
+  overflow: hidden;
+}
+section.shop .goods .elem .data .cb .col {
+  width: 195px;
+  float: left;
+}
+section.shop .goods .elem .data .cb .col label {
+  font-size: 15px;
+  color: #414141;
+  font-weight: bold;
+  display: block;
+  margin: 0 0 15px;
+}
+section.shop .goods .elem .data .cb .col label.checked {
+  color: #a3a3a3;
+}
+section.shop .goods .elem .data .cb .col label:last-child {
+  margin: 0;
+}
+section.shop .store {
+  margin: 0 -14px 0 0;
+  background: url(../img/store_bg.png) top right no-repeat;
+}
+section.shop .store button {
+  margin: 20px 0 0 0;
+}
+section.shop .store .wallet {
+  background: #fff;
+  border-radius: 6px;
+  float: right;
+  margin: 0 52px 0 130px;
+  box-shadow: 0 1px 35px rgba(198, 198, 198, 0.97);
+}
+section.shop .store .wallet .title {
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(to bottom, #4772d2 0%, #3f529f 100%);
+  height: 34px;
+  line-height: 34px;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0px #283e8b;
+}
+section.shop .store .wallet .d {
+  padding: 0 15px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #2f4e81;
+  line-height: 73px;
 }
