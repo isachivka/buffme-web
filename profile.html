@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/application.css">
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="wrapper">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png"></a>
+        </div>
+        <div class="user">
+          Вы вошли как
+          <a href=""><img src="img/user.png"></a>
+          Анна Иванова
+          <a href="" class="exit">Выход<i class="icon exit"></i></a>
+        </div><nav>
+  <li><a href="index.html"><i class="icon menu_code"></i>Твоя карта БК</a><i></i></li>
+  <li class="active"><a href="profile.html"><i class="icon profile_active"></i>Твой профиль</a><i></i></li>
+  <li><a href="store.html"><i class="icon mag"></i>Магазин</a><i></i></li>
+</nav>
+<section class="profile">
+  <div class="buff">
+    <div class="left">
+      <h2 class="right_label">1000 ББ</h2>
+      <h2>Твой Бафф</h2>
+      <div class="line">
+        <div class="active">
+          
+        </div>
+      </div>
+      <div class="stats">
+        <span><i class="icon us"></i>Уровень: <em>2</em></span>
+        <span><i class="icon star"></i>ХР: <em>500/1000</em></span>
+        <span>Мультипликатор: <em>х3</em></span>
+      </div>
+    </div>
+    <div class="right">
+      <img src="img/ava.png">
+      <i class="icon hamb"><i class="count">5</i></i>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--<div class="missions">
+    <h2>Твои миссии</h2>
+    <div class="elem">
+      <img src="img/mission.png">
+      <div class="data">
+        <h3>Возьми себе новую миссию</h3>
+        <div class="stats">
+          <span><i class="icon reward"></i>Награда: <em>+100 ХP</em></span>
+          <span><i class="icon cup"></i>Спецнаграда: <em>+200 ХP</em></span>
+          <span>Время: <em>01:00 мин.</em></span>
+        </div>
+        <button class="gray small">Отменить миссию</button>
+      </div>
+    </div>
+    <button class="blue">Список всех миссий<i class="icon dstr"></i><i class="count">+3</i></button>
+  </div>-->
+  <div class="missions">
+    <h2>Твои миссии</h2>
+    <div class="elem">
+      <img src="img/mission.png">
+      <div class="data">
+        <h3>Возьми себе новую миссию</h3>
+        <div class="stats">
+          <span><i class="icon reward"></i>Награда: <em>+100 ХP</em></span>
+          <span><i class="icon cup"></i>Спецнаграда: <em>+200 ХP</em></span>
+          <span>Время: <em>01:00 мин.</em></span>
+        </div>
+        <div class="cb">
+          <div class="col">
+            <label class="checked"><input type="checkbox" checked>Сьесть бургер</label>
+            <label><input type="checkbox">Сьесть бургер</label>
+          </div>
+          <div class="col">
+            <label><input type="checkbox">Сьесть бургер</label>
+            <label><input type="checkbox">Сьесть бургер</label>
+          </div>
+        </div>
+        <button class="gray small">Отменить миссию</button>
+      </div>
+    </div>
+    <h2>Доступные миссии</h2>
+    <div class="elem">
+      <img src="img/mission.png">
+      <div class="data">
+        <h3>Возьми себе новую миссию</h3>
+        <div class="stats">
+          <span><i class="icon reward"></i>Награда: <em>+100 ХP</em></span>
+          <span><i class="icon cup"></i>Спецнаграда: <em>+200 ХP</em></span>
+          <span>Время: <em>01:00 мин.</em></span>
+        </div>
+        <button class="blue small">Взять миссию</button>
+      </div>
+    </div>
+    <div class="elem">
+      <img src="img/mission.png">
+      <div class="data">
+        <h3>Возьми себе новую миссию</h3>
+        <div class="stats">
+          <span><i class="icon reward"></i>Награда: <em>+100 ХP</em></span>
+          <span><i class="icon cup"></i>Спецнаграда: <em>+200 ХP</em></span>
+          <span>Время: <em>01:00 мин.</em></span>
+        </div>
+        <button class="blue small">Взять миссию</button>
+      </div>
+    </div>
+    <div class="elem">
+      <img src="img/mission.png">
+      <div class="data">
+        <h3>Возьми себе новую миссию</h3>
+        <div class="stats">
+          <span><i class="icon reward"></i>Награда: <em>+100 ХP</em></span>
+          <span><i class="icon cup"></i>Спецнаграда: <em>+200 ХP</em></span>
+          <span>Время: <em>01:00 мин.</em></span>
+        </div>
+        <button class="blue small">Взять миссию</button>
+      </div>
+    </div>
+    <div class="bd">
+      <div class="locked">
+        <div class="ovl">
+          <div class="box">Доступно с 2-го уровня</div>
+        </div>
+        <div class="elem">
+          <img src="img/mission.png">
+          <div class="data">
+            <h3>Возьми себе новую миссию</h3>
+            <div class="stats">
+              <span><i class="icon reward"></i>Награда: <em>+100 ХP</em></span>
+              <span><i class="icon cup"></i>Спецнаграда: <em>+200 ХP</em></span>
+              <span>Время: <em>01:00 мин.</em></span>
+            </div>
+            <button class="blue small">Взять миссию</button>
+          </div>
+        </div>
+        <div class="elem">
+          <img src="img/mission.png">
+          <div class="data">
+            <h3>Возьми себе новую миссию</h3>
+            <div class="stats">
+              <span><i class="icon reward"></i>Награда: <em>+100 ХP</em></span>
+              <span><i class="icon cup"></i>Спецнаграда: <em>+200 ХP</em></span>
+              <span>Время: <em>01:00 мин.</em></span>
+            </div>
+            <button class="blue small">Взять миссию</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="blue">Список всех миссий<i class="icon ustr"></i></button>
+  </div>
+  <div class="gray achievement">
+    <h2>Твои ачивки: <a href=""><em>2</em> / 200</a></h2>
+    <div class="carusel">
+      <a href="" class="left"><i class="icon carusel_left"></i></a>
+      <a href="" class="right"><i class="icon carusel_right"></i></a>
+      <div class="ovh">
+        <ul>
+          <li>
+            <i class="icon hamb"><i class="count">5</i></i>
+          </li>
+          <li>
+            <i class="icon glass"><i class="count">5</i></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+          <li>
+            <i class="icon lock_achiv"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="blue">Список всех ачивок<i class="icon dstr"></i><i class="count">+5</i></button>
+  </div>
+  <div class="gray achievement">
+    <h2>Твои ачивки: <a href=""><em>2</em> / 200</a></h2>
+    <div class="cols">
+      <div class="col">
+        <div class="elem">
+          <div class="image"><i class="icon hamb"><i class="count">5</i></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line">
+              <div class="active"></div>
+            </div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="elem">
+          <div class="image"><i class="icon glass"><i class="count">5</i></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line">
+              <div class="active"></div>
+            </div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+        <div class="elem">
+          <div class="image"><i class="icon lock_achiv"></i></div>
+          <div class="d">
+            <div class="title">Поел в любом ресторане 6 из 10</div>
+            <div class="line lock"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="btns">
+      <button class="blue">Загрузить еще 10</button>
+      <button class="blue">Список всех ачивок<i class="icon ustr"></i></button>
+    </div>
+  </div>
+  <div class="gray rewards">
+    <h2>Последние награды</h2>
+    <div class="elem">
+      <span><i class="icon rew_big"></i><big>2 миссии в первую неделю</big></span>
+      <span><i class="icon reward"></i>Награда: <em>все бонусы х2</em></span>
+    </div>
+    <div class="elem">
+      <span><i class="icon rew_big"></i><big>2 миссии в первую неделю</big></span>
+      <span><i class="icon reward"></i>Награда: <em>все бонусы х2</em></span>
+    </div>
+    <button class="blue">Архив наград<i class="icon dstr"></i><i class="count">+3</i></button>
+  </div>
+  <div class="gray rewards locked">
+    <div class="ovl">
+      <div class="box">Доступно с 2-го уровня</div>
+    </div>
+    <h2>Последние награды</h2>
+    <div class="elem">
+      <span><i class="icon rew_big"></i><big>2 миссии в первую неделю</big></span>
+      <span><i class="icon reward"></i>Награда: <em>все бонусы х2</em></span>
+    </div>
+    <div class="elem">
+      <span><i class="icon rew_big"></i><big>2 миссии в первую неделю</big></span>
+      <span><i class="icon reward"></i>Награда: <em>все бонусы х2</em></span>
+    </div>
+    <button class="blue">Архив наград<i class="icon dstr"></i><i class="count">+3</i></button>
+  </div>
+  <div class="gray news">
+    <h2>Новости</h2>
+    <div class="elem">
+      <span class="date">31 апреля</span>
+      Смешные акции уже в БК
+      <a href="" class="r">Читать подробнее</a>
+    </div>
+    <div class="elem">
+      <span class="date">31 апреля</span>
+      Смешные акции уже в БК
+      <a href="" class="r">Читать подробнее</a>
+    </div>
+    <button class="blue">Архив новостей<i class="icon dstr"></i><i class="count">+3</i></button>
+  </div>
+</section>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="js/vendor/icheck.jquery.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
