@@ -24,31 +24,178 @@
           <a href=""><img src="img/user.png"></a>
           Анна Иванова
           <a href="" class="exit">Выход<i class="icon exit"></i></a>
-        </div>  <a href="" data-role="popup_open" data-target="#error">
-    Ошибка
+        </div><nav>
+  <li><a href="index.html"><i class="icon menu_code"></i>Твоя карта БК</a><i></i></li>
+  <li><a href="profile.html"><i class="icon profile"></i>Твой профиль</a><i></i></li>
+  <li><a href="store.html"><i class="icon mag"></i>Магазин</a><i></i></li>
+</nav>
+<section class="popups">
+  <a href="" data-role="popup_open" data-target="#login">
+    Вход
   </a>
-  <a href="" data-role="popup_open" data-target="#information">
-    Информация
+  <a href="" data-role="popup_open" data-target="#bgking">
+    Бургеркинг
   </a>
-  <a href="" data-role="popup_open" data-target="#sure">
-    Ты уверен?
+  <a href="" data-role="popup_open" data-target="#create">
+    Создание персонажа
   </a>
-  <a href="" data-role="popup_open" data-target="#ok">
-    Класс
+  <a href="" data-role="popup_open" data-target="#mission">
+    Миссия выполнена
   </a>
-  <a href="" data-role="popup_open" data-target="#multi">
-    Мультипликатор
-  </a>
-  <a href="" data-role="popup_open" data-target="#reward">
-    Поздравляем
+  <a href="" data-role="popup_open" data-target="#achiv">
+    Новая ачивка
   </a>
   <a href="" data-role="popup_open" data-target="#bonus">
     Бонус
   </a>
+  <a href="" data-role="popup_open" data-target="#error">
+    Ошибка
+  </a>
+  <a href="" data-role="popup_open" data-target="#error1">
+    Ошибка (1)
+  </a>
+  <a href="" data-role="popup_open" data-target="#ok">
+    Класс
+  </a>
+  <a href="" data-role="popup_open" data-target="#question">
+    Ты уверен?
+  </a>
   <a href="" data-role="popup_open" data-target="#lvlup">
     Новый уровень
   </a>
+  <a href="" data-role="popup_open" data-target="#acv">
+    Достижение
+  </a>
+</section>
+<div class="popup_wrapper" id="login" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box enter">
+      <div class="title-wrap"><div class="title">Входи через соц.сеть</div></div>
+      <img src="img/ava1.png">
+      <div class="btns">
+        <button class="blue"><i class="icon vk"></i></button>
+        <button class="blue"><i class="icon fb"></i></button>
       </div>
+      <div class="accept">
+        <label for=""><input type="checkbox">Я согласен с <a href="">польщовательским соглашение</a>, а также с <a href="">правилами текущей акции</a> от сервиса Buffme.</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="bgking" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box bgking">
+      <div class="title-wrap"><div class="title red">Вы посещали BurgerKing?</div></div>
+      <img src="img/bgk.png">
+      <div class="cbs">
+        <label><input type="checkbox" name="c1">Я постоянный посетитель BurgerKing</label>
+        <label><input type="checkbox" name="c2">Иногда зохожу с друзьями</label>
+        <label><input type="checkbox" name="c3">Никогда небыл, но очень хочу зайти</label>
+      </div>
+      <div class="btns"><button class="blue">Ответить</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="create" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box person">
+      <div class="title-wrap"><div class="title">Создаем персонажа?</div></div>
+      <img src="img/ava1.png">
+      <div class="name">Анджелина Джоли Войт</div>
+      <div class="accept">
+        <label for=""><input type="checkbox">Согласен(на) с <a href="">правилами акции</a></label>
+      </div>
+      <div class="btns"><button class="blue">Создать персонажа</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="mission" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box mission">
+      <div class="title-wrap"><div class="title">Миссия выполнена</div></div>
+      <div class="a">
+        <img src="img/ava1.png">
+        <i class="icon check"></i>
+      </div>
+      <div class="name">Миссия «Новичек» выполнена!</div>
+      <div class="stats">
+        <span><i class="icon reward"></i>Награда: <em>+300 ХP</em></span>
+        <span><i class="icon us"></i>100XP до 3 уровня!</span>
+      </div>
+      <div class="btns"><button class="gray">Закрыть</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="achiv" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box acvi">
+      <div class="title-wrap"><div class="title">Новая ачивка</div></div>
+      <i class="icon hamb_big"><i class="icon check"></i></i>
+      <div class="name">Ачивка «Коллафан» взята!</div>
+      <div class="btns"><button class="gray">Закрыть</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="bonus" data-role="popup">
+  <div class="popup big" data-role="popup_window">
+    <div class="box">
+      <div class="title-wrap"><div class="title">Дополнительные бонусы</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="error" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box">
+      <div class="title-wrap"><div class="title red">Внимание! Ошибка!</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="error1" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box">
+      <div class="title-wrap"><div class="title red">Внимание! Ошибка!</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="ok" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box">
+      <div class="title-wrap"><div class="title">Информация</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="question" data-role="popup">
+  <div class="popup" data-role="popup_window">
+    <div class="box">
+      <div class="title-wrap"><div class="title">Информация</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="lvlup" data-role="popup">
+  <div class="popup big" data-role="popup_window">
+    <div class="box">
+      <div class="title-wrap"><div class="title">Достигнут новый уровень</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="popup_wrapper" id="acv" data-role="popup">
+  <div class="popup big" data-role="popup_window">
+    <div class="box">
+      <div class="title-wrap"><div class="title">Новое достижение</div></div>
+    </div>
+  </div>
+</div>      </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
